@@ -26,7 +26,7 @@ export class ParentComponent {
       level: this.level,
       gender: this.gender
     }
-    
+
     this.details.push(objPerson)
     console.log(this.details);
 }

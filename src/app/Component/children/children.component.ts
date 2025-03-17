@@ -12,4 +12,10 @@ import {MatTableModule} from '@angular/material/table';
 export class ChildrenComponent {
 @Input() theDetails: any;
 // @Input() theDetails: any[] = [];
+
+showMore: boolean = false;
+
+toggleContent () {
+  this.showMore = !this.showMore;
+}
 }

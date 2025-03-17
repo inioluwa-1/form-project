@@ -2,20 +2,16 @@
         <table class="table table-striped">
             <thead>
               <tr>
+                <th>S/N</th>
                 <th>Name</th>
-                <th>Age</th>
-                <th>School</th>
-                <th>Level</th>
-                <th>Gender</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let detail of theDetails">
-                <td>{{detail.name}}</td>
-                <td>{{detail.age}}</td>
-                <td>{{detail.school}}</td>
-                <td>{{detail.level}}</td>
-                <td>{{detail.gender}}</td>
+              <tr *ngFor="let detail of theDetails; let i = index">
+                <td>{{i + 1}}</td>
+                  <td>{{detail.name}} <br>  <a (click)="toggleContent()">{{ showMore ? 'Hide details' : 'show more' }}</a>
+                    <br> <span *ngIf="showMore">{{detail.age}}<br>{{detail.school}}<br>{{detail.level}}<br>{{detail.gender}}<br></span>
+                  </td>
               </tr>
             </tbody>
         </table>     
