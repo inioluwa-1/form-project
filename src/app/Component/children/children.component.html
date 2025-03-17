@@ -1,0 +1,22 @@
+<div class="w-50 mx-auto">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>School</th>
+                <th>Level</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let detail of theDetails">
+                <td>{{detail.name}}</td>
+                <td>{{detail.age}}</td>
+                <td>{{detail.school}}</td>
+                <td>{{detail.level}}</td>
+                <td>{{detail.gender}}</td>
+              </tr>
+            </tbody>
+        </table>     
+</div>
